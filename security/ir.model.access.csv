@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_/var/lib/odoo/addons/18.0/gestion_paqueteria_/var/lib/odoo/addons/18.0/gestion_paqueteria,/var/lib/odoo/addons/18.0/gestion_paqueteria./var/lib/odoo/addons/18.0/gestion_paqueteria,model_/var/lib/odoo/addons/18.0/gestion_paqueteria_/var/lib/odoo/addons/18.0/gestion_paqueteria,base.group_user,1,1,1,1
+access_gestion_paqueteria_empresa,access_gestion_paqueteria_empresa,model_gestion_paqueteria_empresa,base.group_user,1,1,1,1
+access_gestion_paqueteria_camion,access_gestion_paqueteria_camion,model_gestion_paqueteria_camion,base.group_user,1,1,1,1
+access_gestion_paqueteria_paquete,access_gestion_paqueteria_paquete,model_gestion_paqueteria_paquete,base.group_user,1,1,1,1
+access_gestion_paqueteria_seguimiento,access_gestion_paqueteria_seguimiento,model_gestion_paqueteria_seguimiento,base.group_user,1,1,1,1

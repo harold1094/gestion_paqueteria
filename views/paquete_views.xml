@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree -->
+    <record id="view_gestion_paqueteria_paquete_tree" model="ir.ui.view">
+        <field name="name">gestion.paqueteria.paquete.tree</field>
+        <field name="model">gestion.paqueteria.paquete</field>
+        <field name="arch" type="xml">
+            <tree string="Paquetes">
+                <field name="name"/>
+                <field name="empresa_id"/>
+                <field name="camion_id"/>
+                <field name="destinatario_id"/>
+                <field name="estado"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_gestion_paqueteria_paquete_form" model="ir.ui.view">
+        <field name="name">gestion.paqueteria.paquete.form</field>
+        <field name="model">gestion.paqueteria.paquete</field>
+        <field name="arch" type="xml">
+            <form string="Paquete">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                        <field name="peso_kg"/>
+                    </group>
+                    <group string="Datos de envío">
+                        <field name="empresa_id"/>
+                        <field name="camion_id"/>
+                        <field name="remitente_id"/>
+                        <field name="destinatario_id"/>
+                    </group>
+                    <group string="Estado">
+                        <field name="estado"/>
+                        <field name="fecha_envio"/>
+                        <field name="fecha_entrega_estimada"/>
+                    </group>
+                    <notebook>
+                        <page string="Seguimiento">
+                            <field name="seguimiento_ids">
+                                <tree editable="bottom">
+                                    <field name="fecha"/>
+                                    <field name="estado"/>
+                                    <field name="notas"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción -->
+    <record id="action_gestion_paqueteria_paquete" model="ir.actions.act_window">
+        <field name="name">Paquetes</field>
+        <field name="res_model">gestion.paqueteria.paquete</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menú raíz -->
+    <menuitem id="menu_gestion_paqueteria_root"
+              name="Gestión de Paquetería"
+              sequence="10"/>
+
+    <!-- Menú nivel 1 -->
+    <menuitem id="menu_gestion_paqueteria_operaciones"
+              name="Operaciones"
+              parent="menu_gestion_paqueteria_root"
+              sequence="10"/>
+
+    <!-- Submenús (nivel 2) con acciones -->
+    <menuitem id="menu_gestion_paqueteria_empresas"
+              name="Empresas"
+              parent="menu_gestion_paqueteria_operaciones"
+              action="action_gestion_paqueteria_empresa"
+              sequence="10"/>
+
+    <menuitem id="menu_gestion_paqueteria_camiones"
+              name="Camiones"
+              parent="menu_gestion_paqueteria_operaciones"
+              action="action_gestion_paqueteria_camion"
+              sequence="20"/>
+
+    <menuitem id="menu_gestion_paqueteria_paquetes"
+              name="Paquetes"
+              parent="menu_gestion_paqueteria_operaciones"
+              action="action_gestion_paqueteria_paquete"
+              sequence="30"/>
+
+    <menuitem id="menu_gestion_paqueteria_seguimiento"
+              name="Seguimiento"
+              parent="menu_gestion_paqueteria_operaciones"
+              action="action_gestion_paqueteria_seguimiento"
+              sequence="40"/>
+</odoo>

@@ -1,34 +1,19 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "/var/lib/odoo/addons/18.0/gestion_paqueteria",
-
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
-
-    'description': """
-Long description of module's purpose
-    """,
-
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
-
-    # always loaded
+    'name': 'Gestión de Paquetería',
+    'version': '1.0',
+    'author': 'Harold',
+    'category': 'Operations',
+    'summary': 'Gestión sencilla de paquetería: empresas, camiones, paquetes y seguimiento',
+    'depends': ['base', 'contacts'],
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        'views/empresa_views.xml',
+        'views/camion_views.xml',
+        'views/paquete_views.xml',
+        'views/seguimiento_views.xml',
+        'views/paqueteria_menu.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'installable': True,
+    'application': True,
 }
-
