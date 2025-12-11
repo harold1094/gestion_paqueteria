@@ -1,54 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Tree -->
-    <record id="view_gestion_paqueteria_empresa_tree" model="ir.ui.view">
-        <field name="name">gestion.paqueteria.empresa.tree</field>
+
+    <!-- LIST -->
+    <record id="view_gestion_paqueteria_empresa_list" model="ir.ui.view">
+        <field name="name">gestion.paqueteria.empresa.list</field>
         <field name="model">gestion.paqueteria.empresa</field>
         <field name="arch" type="xml">
-            <tree string="Empresas">
+            <list string="Empresas">
                 <field name="name"/>
                 <field name="city"/>
                 <field name="phone"/>
-            </tree>
+            </list>
         </field>
     </record>
 
-    <!-- Form -->
+    <!-- FORM -->
     <record id="view_gestion_paqueteria_empresa_form" model="ir.ui.view">
         <field name="name">gestion.paqueteria.empresa.form</field>
         <field name="model">gestion.paqueteria.empresa</field>
         <field name="arch" type="xml">
-            <form string="Empresa de paquetería">
+            <form string="Empresa de Paquetería">
                 <sheet>
                     <group>
                         <field name="name"/>
                         <field name="phone"/>
                         <field name="email"/>
                     </group>
+
                     <group string="Dirección">
                         <field name="street"/>
                         <field name="city"/>
                         <field name="zip"/>
                         <field name="country_id"/>
                     </group>
+
                     <notebook>
                         <page string="Camiones">
                             <field name="camion_ids">
-                                <tree editable="bottom">
+                                <list editable="bottom">
                                     <field name="name"/>
                                     <field name="modelo"/>
                                     <field name="capacidad_kg"/>
                                     <field name="activo"/>
-                                </tree>
+                                </list>
                             </field>
                         </page>
+
                         <page string="Paquetes">
                             <field name="paquete_ids">
-                                <tree>
+                                <list>
                                     <field name="name"/>
                                     <field name="destinatario_id"/>
                                     <field name="estado"/>
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
@@ -57,10 +61,11 @@
         </field>
     </record>
 
-    <!-- Acción -->
+    <!-- ACTION -->
     <record id="action_gestion_paqueteria_empresa" model="ir.actions.act_window">
         <field name="name">Empresas</field>
         <field name="res_model">gestion.paqueteria.empresa</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
+
 </odoo>

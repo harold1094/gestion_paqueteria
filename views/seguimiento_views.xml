@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Tree -->
-    <record id="view_gestion_paqueteria_seguimiento_tree" model="ir.ui.view">
-        <field name="name">gestion.paqueteria.seguimiento.tree</field>
+
+    <!-- LIST -->
+    <record id="view_gestion_paqueteria_seguimiento_list" model="ir.ui.view">
+        <field name="name">gestion.paqueteria.seguimiento.list</field>
         <field name="model">gestion.paqueteria.seguimiento</field>
         <field name="arch" type="xml">
-            <tree string="Seguimiento de paquetes">
+            <list string="Seguimiento">
                 <field name="paquete_id"/>
                 <field name="fecha"/>
                 <field name="estado"/>
-            </tree>
+            </list>
         </field>
     </record>
 
-    <!-- Form -->
+    <!-- FORM -->
     <record id="view_gestion_paqueteria_seguimiento_form" model="ir.ui.view">
         <field name="name">gestion.paqueteria.seguimiento.form</field>
         <field name="model">gestion.paqueteria.seguimiento</field>
@@ -31,10 +32,11 @@
         </field>
     </record>
 
-    <!-- Acción -->
+    <!-- ACTION -->
     <record id="action_gestion_paqueteria_seguimiento" model="ir.actions.act_window">
         <field name="name">Seguimiento</field>
         <field name="res_model">gestion.paqueteria.seguimiento</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
+
 </odoo>
