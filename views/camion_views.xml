@@ -29,15 +29,19 @@
                         <field name="empresa_id"/>
                         <field name="activo"/>
                     </group>
-                    <page string="Paquetes">
-                        <field name="paquete_ids">
-                            <tree>
-                                <field name="name"/>
-                                <field name="estado"/>
-                                <field name="destinatario_id"/>
-                            </tree>
-                        </field>
-                    </page>
+
+                    <!-- 🔹 IMPORTANTE: notebook + page -->
+                    <notebook>
+                        <page string="Paquetes">
+                            <field name="paquete_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="estado"/>
+                                    <field name="destinatario_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
